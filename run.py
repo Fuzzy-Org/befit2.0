@@ -22,6 +22,13 @@ def main():
         "Метрика для обрахунку?", ("cog", "fom", "lov", "mom")
     )
 
+    print("Input data:")
+    print(f"Gender: {gender}")
+    print(f"Age: {age}")
+    print(f"Height: {height}")
+    print(f"Weight: {weight}")
+    print(f"Metric: {metric}")
+
     val, word, x, fp1, EK4 = get_fuzzy_index(gender, age, height, weight, metric)
 
     title = f"Ваш індекс ваги: {val:.2f}"
@@ -34,6 +41,9 @@ def main():
     elif word == "Obese":
         title += ", у вас ожиріння"
 
+    print(f"Model output: {title}, index: {val}")
+    print()
+
     st.title(title)
     col1, col2 = st.columns(2)
     with col1:
@@ -43,6 +53,8 @@ def main():
 
     t2_plot.draw_words_model(model.output_lv)
     t2_plot.draw_words_model(model.input_lvs[0])
+    t2_plot.draw_words_model(model.input_lvs[1])
+    t2_plot.draw_words_model(model.input_lvs[2])
 
 
 if __name__ == "__main__":
