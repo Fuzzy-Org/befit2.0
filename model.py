@@ -98,66 +98,82 @@ output_lv = {
 rule_base = [
     (("young", "light", "short"), "Normal"),
     (("young", "light", "average"), "Normal"),
-    (("young", "light", "tall"), "Normal"),
+    (("young", "light", "tall"), "Underweight"),
     (("young", "light", "stature"), "Underweight"),
+    
     (("young", "average", "short"), "Overweight"),
-    (("young", "average", "average"), "Overweight"),
+    (("young", "average", "average"), "Normal"),
     (("young", "average", "tall"), "Normal"),
     (("young", "average", "stature"), "Underweight"),
+    
     (("young", "heavy", "short"), "Obese"),
     (("young", "heavy", "average"), "Overweight"),
-    (("young", "heavy", "tall"), "Overweight"),
+    (("young", "heavy", "tall"), "Normal"),
     (("young", "heavy", "stature"), "Normal"),
+    
     (("young", "hefty", "short"), "Obese"),
     (("young", "hefty", "average"), "Obese"),
-    (("young", "hefty", "tall"), "Obese"),
-    (("young", "hefty", "stature"), "Overweight"),
+    (("young", "hefty", "tall"), "Overweight"),
+    (("young", "hefty", "stature"), "Normal"),
+    
     (("adult", "light", "short"), "Normal"),
     (("adult", "light", "average"), "Normal"),
     (("adult", "light", "tall"), "Underweight"),
     (("adult", "light", "stature"), "Underweight"),
-    (("adult", "average", "short"), "Overweight"),
+    
+    (("adult", "average", "short"), "Normal"),
     (("adult", "average", "average"), "Normal"),
     (("adult", "average", "tall"), "Normal"),
     (("adult", "average", "stature"), "Underweight"),
+    
     (("adult", "heavy", "short"), "Overweight"),
     (("adult", "heavy", "average"), "Overweight"),
-    (("adult", "heavy", "tall"), "Overweight"),
+    (("adult", "heavy", "tall"), "Normal"),
     (("adult", "heavy", "stature"), "Normal"),
+    
     (("adult", "hefty", "short"), "Obese"),
-    (("adult", "hefty", "average"), "Obese"),
+    (("adult", "hefty", "average"), "Overweight"),
     (("adult", "hefty", "tall"), "Overweight"),
-    (("adult", "hefty", "stature"), "Overweight"),
+    (("adult", "hefty", "stature"), "Normal"),
+    
     (("middle", "light", "short"), "Normal"),
-    (("middle", "light", "average"), "Underweight"),
+    (("middle", "light", "average"), "Normal"),
     (("middle", "light", "tall"), "Underweight"),
     (("middle", "light", "stature"), "Underweight"),
+    
     (("middle", "average", "short"), "Normal"),
     (("middle", "average", "average"), "Normal"),
     (("middle", "average", "tall"), "Normal"),
     (("middle", "average", "stature"), "Underweight"),
+    
     (("middle", "heavy", "short"), "Overweight"),
     (("middle", "heavy", "average"), "Overweight"),
     (("middle", "heavy", "tall"), "Normal"),
     (("middle", "heavy", "stature"), "Normal"),
+    
     (("middle", "hefty", "short"), "Obese"),
     (("middle", "hefty", "average"), "Overweight"),
-    (("middle", "hefty", "tall"), "Overweight"),
-    (("middle", "hefty", "stature"), "Overweight"),
-    (("senior", "light", "short"), "Underweight"),
+    (("middle", "hefty", "tall"), "Normal"),
+    (("middle", "hefty", "stature"), "Normal"),
+    
+    (("senior", "light", "short"), "Normal"),
     (("senior", "light", "average"), "Underweight"),
     (("senior", "light", "tall"), "Underweight"),
     (("senior", "light", "stature"), "Underweight"),
+    
     (("senior", "average", "short"), "Normal"),
     (("senior", "average", "average"), "Normal"),
     (("senior", "average", "tall"), "Underweight"),
     (("senior", "average", "stature"), "Underweight"),
+    
     (("senior", "heavy", "short"), "Overweight"),
     (("senior", "heavy", "average"), "Overweight"),
     (("senior", "heavy", "tall"), "Normal"),
     (("senior", "heavy", "stature"), "Normal"),
+    
     (("senior", "hefty", "short"), "Obese"),
     (("senior", "hefty", "average"), "Overweight"),
     (("senior", "hefty", "tall"), "Overweight"),
-    (("senior", "hefty", "stature"), "Overweight"),
+    (("senior", "hefty", "stature"), "Normal"),
+
 ]

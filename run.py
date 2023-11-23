@@ -1,12 +1,8 @@
-import random
+from arrow import get
 import model
-import t2_mandani_inference
 import streamlit as st
-import pandas as pd
-import t2_fuzzifier
 import t2_plot
-import t2_model_of_words
-from model import input_lvs
+from utils import get_fuzzy_index
 
 
 def main():
@@ -26,21 +22,7 @@ def main():
         "Метрика для обрахунку?", ("cog", "fom", "lov", "mom")
     )
 
-    gender = 1 if gender == "Чоловіча" else 0
-    age = min(10, t2_fuzzifier.__normalization(age, (18, 100, 1)))
-    height = min(10, t2_fuzzifier.__normalization(height, (110, 220, 1)))
-    weight = min(10, t2_fuzzifier.__normalization(weight, (40, 120, 1)))
-
-    if not "U" in model.input_lvs[0].keys():
-        t2_mandani_inference.preprocessing(model.input_lvs, model.output_lv)
-
-    val, word, x, fp1, EK4 = t2_mandani_inference.process(
-        model.input_lvs,
-        model.output_lv,
-        model.rule_base,
-        [age, weight, height],
-        metric,
-    )
+    val, word, x, fp1, EK4 = get_fuzzy_index(gender, age, height, weight, metric)
 
     title = f"Ваш індекс ваги: {val:.2f}"
     if word == "Underweight":
