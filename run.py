@@ -1,4 +1,3 @@
-from arrow import get
 import model
 import streamlit as st
 import t2_plot
