@@ -39,5 +39,6 @@ python -m unittest fuzzy_logic_test
 
 ### Класні челіки
 
-- [@Danylo](https://github.com/danyaobertan)
 - [@Taras](https://github.com/Gavair)
+- [@Danylo](https://github.com/danyaobertan)
+
